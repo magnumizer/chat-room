@@ -1,0 +1,61 @@
+.list-cell {
+    -fx-alignment: center;
+}
+
+
+#root {
+    -fx-background-image: url("Images/background.png");
+    -fx-background-size: 800 600;
+    -fx-background-position: center center;
+    -fx-background-radius: 60;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+
+}
+
+.button {
+    -fx-background-color:transparent;
+}
+
+.scroll-pane {
+   -fx-background-color: rgba(3,9,19,1);
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+
+.list-view {
+    -fx-background-color: rgba(3,9,19,0.9);
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: rgba(3,9,19,0.9);
+}
+.list-view .list-cell:odd {
+    -fx-background-color: rgba(3,9,19,0.9);
+}
+
+#chatarea {
+    -fx-background-color: rgba(3,9,19,1) /*rgba(3,9,19,0.9);*/
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}

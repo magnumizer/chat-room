@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="root" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChatController">
+   <children>
+      <AnchorPane layoutX="78.0" layoutY="57.0" prefHeight="380.0" prefWidth="373.0" style="-fx-border-color: black; -fx-border-image-width: 1;">
+         <children>
+            <ScrollPane fx:id="chatScroll" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" onMousePressed="#onChatPan" onMouseReleased="#onChatPanExit" prefHeight="380.0" prefViewportHeight="200.0" prefViewportWidth="200.0" prefWidth="373.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <TextFlow id="chatarea" fx:id="chatField" prefHeight="380.0" prefWidth="373.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></TextFlow>
+               </content>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="listPane" disable="true" layoutX="493.0" layoutY="159.0" prefHeight="363.0" prefWidth="234.0" style="-fx-border-color: black; -fx-border-image-width: 1;">
+         <children>
+            <Label alignment="CENTER" layoutY="2.0" prefHeight="32.0" prefWidth="232.0" text="Users in chat" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="10.0" />
+               </font>
+            </Label>
+            <ListView fx:id="userList" layoutX="2.0" layoutY="37.0" mouseTransparent="true" prefHeight="336.0" prefWidth="232.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="36.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="494.0" layoutY="52.0" prefHeight="24.0" prefWidth="287.0" text="Connected to server" textFill="WHITE">
+         <font>
+            <Font name="Lucida Console" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ipLabel" layoutX="494.0" layoutY="76.0" prefHeight="24.0" prefWidth="305.0" text="Internet Protocol address: 127.0.0.1" textFill="WHITE">
+         <font>
+            <Font name="Lucida Console" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="portLabel" layoutX="494.0" layoutY="100.0" prefHeight="24.0" prefWidth="287.0" text="Port number: 4444" textFill="WHITE">
+         <font>
+            <Font name="Lucida Console" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="disconnectBtn" layoutX="528.0" layoutY="514.0" mnemonicParsing="false" onAction="#onDisconnectBtn" onMouseEntered="#onDisconnectBtnEnter" onMouseExited="#onDisconnectBtnExit" prefHeight="9.0" prefWidth="21.0">
+         <font>
+            <Font size="5.0" />
+         </font></Button>
+      <AnchorPane fx:id="messagePane" disable="true" layoutX="78.0" layoutY="443.0" prefHeight="131.0" prefWidth="373.0" style="-fx-border-color: black; -fx-border-image-width: 1;">
+         <children>
+            <Label layoutY="2.0" prefHeight="32.0" prefWidth="371.0" text="Type a message" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="messageField" layoutX="21.0" layoutY="34.0" prefHeight="79.0" prefWidth="287.0" wrapText="true" />
+            <Button fx:id="sendBtn" defaultButton="true" disable="true" layoutX="317.0" layoutY="89.0" mnemonicParsing="false" onAction="#onSendBtn" onMouseEntered="#onSendBtnEnter" onMouseExited="#onSendBtnExit" prefHeight="18.0" prefWidth="21.0">
+               <font>
+                  <Font size="2.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="usernameLabel" layoutX="494.0" layoutY="124.0" prefHeight="24.0" prefWidth="287.0" text="Username: user1" textFill="WHITE">
+         <font>
+            <Font name="Lucida Console" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="47.0" prefWidth="800.0" text="TCP/IP Network Protocol Application DAT16i" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeBtn" layoutX="760.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCloseBtn" onMouseEntered="#onCloseBtnEnter" onMouseExited="#onCloseBtnExit" prefHeight="30.0" prefWidth="30.0" />
+      <Button fx:id="minBtn" layoutX="728.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMinBtn" onMouseEntered="#onMinBtnEnter" onMouseExited="#onMinBtnExit" prefHeight="30.0" prefWidth="30.0" />
+   </children>
+</AnchorPane>
